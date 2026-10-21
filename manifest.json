@@ -1,0 +1,19 @@
+{
+  "name": "WalletX – Portafoglio Digitale",
+  "short_name": "WalletX",
+  "description": "Gestione intelligente del portafoglio personale",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f0eb",
+  "theme_color": "#f5f0eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "categories": ["finance", "productivity"],
+  "shortcuts": [
+    { "name": "Nuova transazione", "url": "/#transactions?new=1", "icons": [{ "src": "icons/icon-192.svg" }] },
+    { "name": "Grafici", "url": "/#charts" }
+  ]
+}
