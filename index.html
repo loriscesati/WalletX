@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=int">
+    <title>WalletX PWA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#a8dadc">
+    <!-- Firebase SDKs (Compat mode for ease of use with existing logic) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <!-- Navigation Bar (Top) -->
+        <header class="app-bar">
+            <h1 id="view-title">WalletX</h1>
+            <div class="header-actions">
+                <button id="btn-auth" class="icon-btn" title="Profilo">👤</button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <div id="view-container">
+                <!-- Dynamic views will be injected here by app.js -->
+                <div class="loading-screen">
+                    <div class="spinner"></div>
+                    <p>Caricamento WalletX...</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation (Mobile/PWA optimized) -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-view="dashboard" title="Dashboard">
+                <span class="icon">📊</span>
+                <span class="label">Home</span>
+            </button>
+            <button class="nav-item" data-view="transactions" title="Transazioni">
+                <span class="icon">💸</span>
+                <span class="label">Spese</span>
+            </button>
+            <button class="nav-item" data-view="subscriptions" title="Abbonamenti">
+                <span class="icon">🔄</span>
+                <span class="label">Sub</span>
+            </button>
+            <button class="nav-item" data-view="savings" title="Obiettivi">
+                <span class="icon">🎯</span>
+                <span class="label">Target</span>
+            </button>
+            <button class="nav-item" data-view="settings" title="Impostazioni">
+                <span class="icon">⚙️</span>
+                <span class="label">Menu</span>
+            </button>
+        </nav>
+
+        <!-- Side Drawer for Advanced Management -->
+        <div id="side-drawer" class="drawer">
+            <div class="drawer-header">
+                <h2>Gestione Avanzata</h2>
+                <button id="btn-close-drawer" class					class="close-btn">&times;</button>
+            </div>
+            <div class="drawer-content">
+                <ul class="menu-list">
+                    <li><button id="nav-tags" class="menu-item">🏷️ Tag</button></li>
+                    <li><button id="nav-stats" class="menu-item">📈 Statistiche Avanzate</button></li>
+                    <li><button id="nav-history" class="menu-item">📜 Cronologia</button></li>
+                </ul>
+            </div>
+        </div>
+        <div id="drawer-overlay" class="overlay"></div>
+    </div>
+
+    <!-- Application Entry Point -->
+    <!-- Note: app.js imports its own dependencies (firebase, utils) via ES Modules -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
