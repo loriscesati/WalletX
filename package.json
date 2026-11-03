@@ -1,5 +1,35 @@
 {
+  "name": "walletx_pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sw.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loriscesati/WalletX.git"
+  },
+  "keywords": [],
+  "author": "Gregorio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loriscesati/WalletX/issues"
+  },
+  "homepage": "https://github.com/loriscesati/WalletX#readme",
   "dependencies": {
-    "firebase": "^13.1.0"
+    "chart.js": "^4.6.1",
+    "firebase": "^9.23.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.2.1",
+    "serve": "^14.2.6",
+    "vite": "^8.3.5"
   }
 }
